@@ -1,0 +1,290 @@
+*,
+html,
+body{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+body{
+    background-color: #636363;
+    min-height: 3000px;
+    color: white;
+    
+}
+
+/* Header photo start */
+.parralax{
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    margin-bottom: -210px;
+}
+.parralax .image-wraper::before{
+    
+
+}
+.image-wraper{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((105% - (1em * (var(--per-view)))) / var(--per-view));
+    position: relative;
+    right: 0;
+    left: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.image-wraper > *{
+    aspect-ratio: 1 / 0;
+}
+
+.parralax .image-wraper img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    display: block;
+    
+}
+
+/* Header photo End */
+nav{
+  top: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+    z-index: 9999;
+    padding: 2%;
+    background-color: rgba(57, 53, 53, 0.897);
+    display:inline-flex;
+    justify-content: space-between; 
+}
+
+nav .logo {
+    font-size: 150%;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    display: inline-flex;
+    font-family: 'Bebas Neue', cursive;
+} 
+nav .logo img{
+
+}
+nav .logo span{
+    color: rgb(200, 10, 10);
+}
+/* logo animation  start*/
+nav .logo:hover,
+nav .logo span:hover {
+    text-decoration: underline rgb(255, 255, 255);
+    transition: ease-in-out 0.2s;
+    rotate: 2deg;
+    color: aqua;
+}
+/* logo animation end */
+nav .menu-nav{
+    display: inline-block,;
+    font-family: 'Bebas Neue', cursive;
+    font-size:34px;
+    
+}
+
+nav .menu-nav a{
+   padding-left: 1rem;
+   padding-right: 1rem;
+   color: rgb(255, 255, 255);
+}
+
+nav .menu-nav a:hover{
+    color: aqua;
+    text-decoration: underline white;
+}
+nav .nav-extra img{
+    width: 30%;
+    cursor:pointer ;
+    padding-left: 1.5rem;
+    color: #d7198e;    
+}
+
+nav .nav-extra #menu{
+    display: none;
+}
+
+
+/* Conten start*/
+.conten{
+    padding-top: 120px;
+}
+.conten .header{
+    max-height: 400px;
+    
+    
+}
+.conten .header h1{
+    display: row;
+    color: rgb(0, 0, 0);
+    font-family: 'Merriweather', serif;
+}
+
+.conten .header p{
+    text-align: center;
+   margin: 2px;
+    font-size: 180%;
+    display: flex;
+    color: rgb(150, 149, 149);
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 1.2rem 7%;
+}
+.conten .kata{
+    padding: 12px;
+    margin: 12px;
+    width: 45%;
+}
+.conten .kata p{
+    font-size: 1.3rem;
+    color: rgb(208, 205, 205);
+    font-family: 'Ovo', serif;
+}
+
+.conten .pengurusan h2 {
+    font-family: 'Poppins', sans-serif;
+    margin: 3px;
+}
+.conten .pengurusan{
+    font-family: 'Poppins', sans-serif;
+    padding: 8%;
+}
+
+
+
+.conten .pengurusan h2
+{
+    font-family: 'Poppins',sans-serif;
+    font-size: 24px;
+    margin-left: 20px;
+    text-align: center;
+}
+.conten .pengurusan .card-wrapper{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}   
+.conten .pengurusan .card-wrapper .cards{
+    text-align: center;
+    margin: 12px;
+    margin-top: 4%;
+    border: solid tomato 2px;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.conten .pengurusan .card-wrapper .cards .card-items img{
+    border-radius: 50%;
+    border: solid tomato 2px;
+}
+.conten .pengurusan  .anggota{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.conten .btn-1 {
+     margin: 5%;
+    text-align: center;
+}
+
+.conten .btn-1 button {
+    width: 10%;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: rgba(29, 28, 28, 0.887);
+    font-size: 1.4rem;
+    font-family: 'Poppins',sans-serif;
+}  
+
+.conten .btn-1 button a{
+    color: white;
+}
+/* Conten end*/
+
+
+
+
+
+
+/* _____________________________________________ */
+/* Media Query Start */
+/* Desktop start */
+
+
+
+  
+  
+  /* Desktop end */
+  /* ________________________________________ */
+  /* Mobile start */
+
+  
+  
+  /* Mobile End */
+  /*_________________________________________  */
+  /* Tablet start */
+  @media (max-width: 768px) {
+    nav .logo{
+        font-size: 120%;
+    }
+    nav .nav-extra #menu{
+        display: block;
+    }
+    nav .menu-nav{
+        position: absolute;
+        top: 0;
+        right: -200%;
+        background-color: rgba(212, 224, 235, 0.682);
+        width: 20rem;
+        height: 200vh;
+    }
+
+    nav .nav-extra{
+   
+    }
+    nav .menu-nav.active {
+        right: 0;
+        overflow: auto;
+      }
+
+      nav .menu-nav a {
+        color: rgb(100, 52, 17);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+      }
+      .conten{
+        padding-top: 20%;
+        
+    }
+
+}
+  
+  
+  
+  
+
+/* Tablet end */
+
+
+
+
+
+
+
+/* Media Query end */
